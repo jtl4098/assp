@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "850512591036",
+    "firebase_url": "https://assp-3c4c3.firebaseio.com",
+    "project_id": "assp-3c4c3",
+    "storage_bucket": "assp-3c4c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850512591036:android:7aebc4cd818a26973bf8b9",
+        "android_client_info": {
+          "package_name": "com.aphealthcare.assp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850512591036-q5mpdt0vk6opgun10dlkmhivee895k9b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4qgu_ndVcvnA3AtkjoiH-VTNJHf7hL3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850512591036-q5mpdt0vk6opgun10dlkmhivee895k9b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

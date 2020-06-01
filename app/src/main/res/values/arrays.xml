@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rank">
+        <item>직책을 선택하십시오</item>
+        <item>사장</item>
+        <item>매니저</item>
+        <item>사원</item>
+    </string-array>
+</resources>
