@@ -125,6 +125,7 @@ public class RegisterActivity extends AppCompatActivity implements AdapterView.O
         }
         if(!password.equals(confirmPassword))
             return false;
+
         return true;
     }
 
