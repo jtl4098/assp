@@ -48,7 +48,7 @@ public class NotificationActivity extends AppCompatActivity {
         recyclerView.setAdapter(notifAdapter);
 
 
-
+        prepareNotifData();
     }
 
     @Override
