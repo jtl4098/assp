@@ -31,6 +31,7 @@ public class AuthActivity extends AppCompatActivity {
     private Button register;
     private Button login;
 
+
     private FirebaseAuth auth;
     private FirebaseFirestore db;
 

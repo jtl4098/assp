@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int SPLASH_DURATION = 3000;
 
+
     Animation topAnim, botAnim;
     ImageView image;
     TextView loadingText;
