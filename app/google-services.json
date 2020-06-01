@@ -1,14 +1,14 @@
 {
   "project_info": {
-    "project_number": "135476267773",
-    "firebase_url": "https://assp-b2844.firebaseio.com",
-    "project_id": "assp-b2844",
-    "storage_bucket": "assp-b2844.appspot.com"
+    "project_number": "162810620462",
+    "firebase_url": "https://fbpracticeatandroid.firebaseio.com",
+    "project_id": "fbpracticeatandroid",
+    "storage_bucket": "fbpracticeatandroid.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:135476267773:android:b2c2962afc2f316460cc94",
+        "mobilesdk_app_id": "1:162810620462:android:8c7bf6be570bfe1b340dbf",
         "android_client_info": {
           "package_name": "com.aphealthcare.assp"
         }
@@ -23,20 +23,21 @@
           }
         },
         {
-          "client_id": "135476267773-abhulkgeojf5rf1u67p1mj3g43s74kit.apps.googleusercontent.com",
+          "client_id": "162810620462-mpnukj739t1i8f0142dn3n41kpo96tjp.apps.googleusercontent.com",
+
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDKA5qvf2rzhb-g9r1RM4nRxUz6VOs0r-E"
+          "current_key": "AIzaSyCiJ9wtSjVHEanZvV8uCnasbyc9-akcKkk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "135476267773-abhulkgeojf5rf1u67p1mj3g43s74kit.apps.googleusercontent.com",
+              "client_id": "162810620462-mpnukj739t1i8f0142dn3n41kpo96tjp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

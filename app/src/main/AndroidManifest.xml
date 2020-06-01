@@ -14,6 +14,7 @@
             android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".RegisterActivity"></activity>
+
         <activity
             android:name=".WorkActivity"
             android:theme="@style/AppThemeWithActionBar" />
