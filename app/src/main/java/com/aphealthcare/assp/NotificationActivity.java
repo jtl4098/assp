@@ -1,5 +1,6 @@
 package com.aphealthcare.assp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.aphealthcare.assp.adapters.NotifAdapter;
@@ -107,6 +108,13 @@ public class NotificationActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+
+        if(id == R.id.notif_add){
+
+            Intent intent = new Intent(NotificationActivity.this, AddNotifiActivity.class);
+            startActivity(intent);
+        }
+
         return true;
     }
 

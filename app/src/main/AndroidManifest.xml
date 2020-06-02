@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AddNotifiActivity"></activity>
         <activity
             android:name=".NotificationActivity"
             android:label="공지사항"
-            android:theme="@style/AppThemeWithActionBar"></activity>
+            android:theme="@style/AppThemeWithActionBar" />
         <activity android:name=".RegisterActivity" />
         <activity
             android:name=".WorkActivity"

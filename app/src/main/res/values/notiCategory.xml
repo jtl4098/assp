@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Noticategory">
+        <item>카테고리를 선택해주십시요.</item>
+        <item>전체 회식공지</item>
+        <item>PA.C 제조 수정관련</item>
+        <item>IV VALVE FILTER 급여관련</item>
+        <item>FCS 비급여관련</item>
+        <item>CSS 급여관련</item>
+    </string-array>
+</resources>

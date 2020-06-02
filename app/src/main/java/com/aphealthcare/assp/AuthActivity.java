@@ -5,6 +5,7 @@ import android.view.Menu;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -96,6 +97,16 @@ public class AuthActivity extends AppCompatActivity {
                     Toast.makeText(AuthActivity.this, "Failed to sign in", Toast.LENGTH_SHORT).show();
                 }
             }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+                String str = e.getMessage();
+                AlertDialog.Builder builder = new AlertDialog.Builder(AuthActivity.this);
+                builder.setTitle("Error").setMessage(str);
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
         });
     }
 
@@ -126,7 +137,8 @@ public class AuthActivity extends AppCompatActivity {
         } else if(password.length() < 6){
             Toast.makeText(AuthActivity.this, "Too short password", Toast.LENGTH_SHORT).show();
             return false;
-        } else
+        }
+        else
             return true;
     }
 }
