@@ -118,8 +118,8 @@ public class AddNotifiActivity<string> extends AppCompatActivity {
 
     }
     public void addOperation(View view){
-        title = findViewById(R.id.id_noti_content);
-        content = findViewById(R.id.id_noti_title);
+        title = findViewById(R.id.id_noti_title);
+        content = findViewById(R.id.id_noti_content);
         auth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
