@@ -16,6 +16,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -24,6 +25,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -40,7 +43,14 @@ public class NotificationActivity extends AppCompatActivity {
     private static final String AUTHORFIELD = "author";
     private static final String PUBLISHDATEFIELD = "publishDate";
     private static final String TEXTFIELD = "text";
+    private static final String TITLEFIELD = "title";
+    private static final String CATEGORYFIELD = "category";
+    private static String id;
     private String tag = "String tag";
+
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private TextView tAuthor, tText, tTitle, tCategory, tPublishDate;
 
     private List<Notification> notifications = new ArrayList<>();   //Notifications list
     private RecyclerView recyclerView;        //Recyclerview
@@ -68,11 +78,12 @@ public class NotificationActivity extends AppCompatActivity {
                     if(!querySnapshot.contains("author"))
                         continue;
                     String author = querySnapshot.getString(AUTHORFIELD);
-                    String title = querySnapshot.getId();
+                    String title = querySnapshot.getString(TITLEFIELD);
                     String text = querySnapshot.getString(TEXTFIELD);
                     String publishDate = querySnapshot.getString(PUBLISHDATEFIELD);
+                    String category = querySnapshot.getString(CATEGORYFIELD);
 
-                    Notification notification = new Notification(author, title, text, publishDate);
+                    Notification notification = new Notification(author, title, text, publishDate, category);
                     notifications.add(notification);
                 }
 
@@ -98,7 +109,11 @@ public class NotificationActivity extends AppCompatActivity {
         int id = item.getItemId();
         return true;
     }
-    
+
+//    public void createNewDialog(){
+//        dialogBuilder = new AlertDialog.Builder(this);
+//        final View notificationPopupView = getLayoutInflater().inflate(R.layout.notif_popup, null);
+//    }
 }
 
 //https://www.androidhive.info/2016/01/android-working-with-recycler-view/
