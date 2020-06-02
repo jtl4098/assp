@@ -61,17 +61,10 @@ public class NotificationActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.exit){
-//            setLoggedIn(auth.getCurrentUser().getEmail());
-//            auth.signOut();
-            startActivity(new Intent(NotificationActivity.this, AuthActivity.class));
-            finish();
-        }
-        else if(id == R.id.search){
-            Toast.makeText(getApplicationContext(), "you click setting", Toast.LENGTH_SHORT).show();
-        }
-        else if(id == R.id.setting){
-            Toast.makeText(getApplicationContext(), "you click setting", Toast.LENGTH_SHORT).show();
+        if(id == R.id.notif_add){
+
+            Intent intent = new Intent(NotificationActivity.this, AddNotifiActivity.class);
+            startActivity(intent);
         }
 
         return true;
