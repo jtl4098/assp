@@ -1,18 +1,20 @@
-package com.aphealthcare.assp.adapters;
+package com.aphealthcare.assp.helpers;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Notification {
     private String author;
     private String title;
     private String text;
-    private long published_date;
+    private String published_date;
 
     public Notification(){
 
     }
 
-    public Notification(String author, String title, String text, long published_date){
+    public Notification(String author, String title, String text, String published_date){
         this.author = author;
         this.title = title;
         this.text = text;
@@ -31,7 +33,7 @@ public class Notification {
         this.text = text;
     }
 
-    public void setPublished_date(long published_date){
+    public void setPublished_date(String published_date){
         this.published_date = published_date;
     }
 
@@ -47,18 +49,17 @@ public class Notification {
         return this.text;
     }
 
+    public String snippet(){
+        if(text.length() > 20){
+            String str = text.substring(0, 20);
+            return str + "...";
+        }
+
+        return text;
+    }
+
     public String getPublished_date(){
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(published_date);
 
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-        String sYear = String.valueOf(year);
-        String sMonth = String.valueOf(month);
-        String sDay = String.valueOf(day);
-        String date = sYear +"/" + sMonth + "/"+ sDay;
-        return date;
+        return published_date;
     }
 }

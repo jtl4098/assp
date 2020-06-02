@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.aphealthcare.assp.R;
+import com.aphealthcare.assp.helpers.Notification;
 
 import java.util.List;
 
@@ -46,7 +47,7 @@ public class NotifAdapter extends RecyclerView.Adapter<NotifAdapter.NotifViewHol
         Notification notification = notificationList.get(position);
         holder.author.setText(notification.getAuthor());
         holder.title.setText(notification.getTitle());
-        holder.text.setText(notification.getText());
+        holder.text.setText(notification.snippet());
         holder.publishedDate.setText(notification.getPublished_date());
     }
 

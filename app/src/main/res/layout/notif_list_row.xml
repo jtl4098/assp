@@ -35,9 +35,9 @@
 
     <TextView
         android:id="@+id/publishdate"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/author"
+        android:layout_alignEnd="@id/title"
          />
 
 </RelativeLayout>
