@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.aphealthcare.assp.adapters.NotifAdapter;
 import com.aphealthcare.assp.helpers.Notification;
+import com.aphealthcare.assp.listeners.RecyclerTouchListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,6 +72,18 @@ public class NotificationActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(notifLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(notifAdapter);
+        recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                Notification notification = notifications.get(position);
+                createNewDialog(notification);
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
 
         db.collection(COLLECTION).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
@@ -110,10 +124,22 @@ public class NotificationActivity extends AppCompatActivity {
         return true;
     }
 
-//    public void createNewDialog(){
-//        dialogBuilder = new AlertDialog.Builder(this);
-//        final View notificationPopupView = getLayoutInflater().inflate(R.layout.notif_popup, null);
-//    }
+    public void createNewDialog(Notification notification){
+
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View notificationPopupView = getLayoutInflater().inflate(R.layout.notif_popup, null);
+        tAuthor = notificationPopupView.findViewById(R.id.notif_popup_author);
+        tText = notificationPopupView.findViewById(R.id.notif_popup_text);
+        tTitle = notificationPopupView.findViewById(R.id.notif_popup_title);
+
+        tAuthor.setText(notification.getAuthor());
+        tText.setText(notification.getText());
+        tTitle.setText(notification.getTitle());
+
+        dialogBuilder.setView(notificationPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
+    }
 }
 
 //https://www.androidhive.info/2016/01/android-working-with-recycler-view/

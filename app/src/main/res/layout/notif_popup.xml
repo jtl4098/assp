@@ -12,8 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/notif_popup_title"
-        tools:layout_editor_absoluteX="-28dp">
+        tools:layout_editor_absoluteX="-28dp"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"/>
 
-    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notif_popup_author"
+        tools:layout_editor_absoluteX="-28dp"
+        app:layout_constraintTop_toBottomOf="@+id/notif_popup_title"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/notif_popup_text"
+        android:layout_width="match_parent"
+        android:layout_height="502dp"
+        android:layout_marginTop="40dp"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/notif_popup_author"
+        tools:layout_editor_absoluteX="-28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

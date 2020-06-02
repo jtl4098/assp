@@ -27,6 +27,8 @@ public class NotifAdapter extends RecyclerView.Adapter<NotifAdapter.NotifViewHol
             text = view.findViewById(R.id.text);
             publishedDate = view.findViewById(R.id.publishdate);
         }
+
+
     }
 
     public NotifAdapter(List<Notification> notificationList){
@@ -49,6 +51,7 @@ public class NotifAdapter extends RecyclerView.Adapter<NotifAdapter.NotifViewHol
         holder.title.setText(notification.getTitle());
         holder.text.setText(notification.snippet());
         holder.publishedDate.setText(notification.getPublished_date());
+
     }
 
     @Override
